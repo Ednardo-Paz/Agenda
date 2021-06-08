@@ -11,13 +11,13 @@
         <div class="col-lg">
           <h4>Faça seu cadastro</h4>
           <p>Se você ainda não tem conta, preencha o formulário abaixo:</p>
-          <form action="/login/register" method="POST">
-            <input type="hidden" name="_csfr" value=<%= csrfToken %>>
-            <div class="mb-3">
+          <form class="form-cadastro" action="/login/register" method="POST">
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+            <div class="form-group">
               <label>Seu e-mail</label>
               <input type="email" class="form-control" name="email">
             </div>
-            <div class="mb-3">
+            <div class="form-group">
               <label>Sua senha</label>
               <input type="password" class="form-control" name="password">
             </div>
@@ -29,13 +29,13 @@
         <div class="col-lg">
           <h4>Faça seu login</h4>
           <p>Se você já tem uma conta faça o login abaixo:</p>
-          <form action="/login/login" method="POST">
+          <form class="form-login" action="/login/login" method="POST">
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
-            <div class="mb-3">
+            <div class="form-group">
               <label>Seu e-mail</label>
               <input type="email" class="form-control" name="email">
             </div>
-            <div class="mb-3">
+            <div class="form-group">
               <label>Sua senha</label>
               <input type="password" class="form-control" name="password">
             </div>
